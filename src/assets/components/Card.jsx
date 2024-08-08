@@ -17,25 +17,25 @@ function Card() {
   const randomStringGroups = splitStringIntoGroups(randomString, 500);
 
   return (
-    <motion.div
-      initial={{ y: "-100%" }}
-      animate={{ y: 0 }}
+    <div
       className="mx-auto max-w-[560px] text-[0.2rem] leading-[.2rem] max-h-[100svh] text-justify text-ellipsis overflow-hidden h-[90svh] text-wrap tracking-tighter bg-cover bg-center bg-no-repeat bg-clip-text text-transparent font-black"
       style={{ backgroundImage: `url(${prof})` }}
     >
-      <motion.p transition={{ duration: 0.5, delay: 0.5 }}>
+      <p>
         {/* {randomString} */}
         {randomStringGroups.map((group, index) => (
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 * index}}
-          key={index} className="">
+            transition={{ duration: 0.5, delay: 0.05 * index }}
+            key={index}
+            className=""
+          >
             {cleanUp(group)}
           </motion.span>
         ))}
-      </motion.p>
-    </motion.div>
+      </p>
+    </div>
   );
 }
 
