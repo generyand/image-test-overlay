@@ -14,7 +14,8 @@
     "framer-motion": "^11.3.24",
     "html-to-image": "^1.11.11",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
