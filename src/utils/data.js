@@ -1,4 +1,4 @@
-import image1 from "../assets/imgs/jamie.jpg";
+import image1 from "../assets/imgs/jamie.webp";
 
 const data = [
   {
