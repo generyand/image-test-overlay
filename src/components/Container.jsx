@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { cleanUp, generateRandomString } from "../utils/helper";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Loader from "./Loader";
 import Card from "./Card";
+import UnavailableComponent from "./UnavailableComponent";
 
 function Container({ item }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,7 +41,11 @@ function Container({ item }) {
 
   return (
     <div className="w-[100vw] mx-auto h-[100svh] flex justify-center items-center">
-      {isLoading ? <Loader /> : <Card item={item} />}
+      <div className="visible sm:hidden">
+        {isLoading ? <Loader /> : <Card item={item} />}
+      </div>
+
+      <UnavailableComponent item={item} />
     </div>
   );
 }

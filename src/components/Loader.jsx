@@ -6,7 +6,11 @@ const LOADER_STATEMENT = "Generating Image...".split("");
 
 function Loader() {
   return (
-    <div className="flex flex-col items-center justify-center h-full">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="flex flex-col items-center justify-center h-full"
+    >
       <DNA
         visible={true}
         height="80"
@@ -27,7 +31,7 @@ function Loader() {
           </motion.span>
         ))}
       </p>
-    </div>
+    </motion.div>
   );
 }
 
