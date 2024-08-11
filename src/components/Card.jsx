@@ -15,6 +15,7 @@ function Card({ item }) {
   }
 
   const handleDownload = useCallback(() => {
+    alert("Your image will be downloaded shortly");
     if (ref.current === null) {
       return;
     }
