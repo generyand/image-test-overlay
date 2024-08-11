@@ -31,7 +31,7 @@ function Container({ item }) {
 
   const loadingTimer = setTimeout(() => {
     setIsLoading(false);
-  }, 1250);
+  }, 1750);
 
   useEffect(() => {
     return () => {

@@ -6,4 +6,9 @@
   body {
     @apply bg-black;
   }
+
+  .text {
+    font-family: Arial, sans-serif;
+    /* font-size: 16px; */
+  }
 }
