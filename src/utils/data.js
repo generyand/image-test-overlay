@@ -1,12 +1,22 @@
-import image1 from "../assets/imgs/jamie.webp";
+import jamieDenise from "../assets/imgs/jamie-denise.webp";
 
 const data = [
   {
     id: 1,
-    name: "jamie",
-    image: image1,
+    name: "Jamie Denise",
+    image: jamieDenise,
     tags: "No other significant findings — still you. "
   },
+  // {
+  //   id: 2,
+  //   name: "sarah",
+  //   image: image1,
+  //   tags: "No other significant findings — still you. "
+  // },
 ];
+
+data.forEach((item) => {
+  item.path = item.name.split(" ").join("-").toLowerCase()
+})
 
 export default data

@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./components/Card";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import data from "./utils/data";
+import Container from "./components/Container";
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
         {data.map((item) => (
           <Route
             key={item.id}
-            path={item.name}
-            element={<Card image={item.image} tags={item.tags} />}
+            path={item.path}
+            element={<Container item={item} />}
           />
         ))}
       </Routes>
